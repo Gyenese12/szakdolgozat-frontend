@@ -21,23 +21,21 @@ function App() {
       })
 
       const data = await response.json()
-
       alert(data.message)
-    } catch (error) {
+    } catch {
       alert('Hiba történt')
     }
   }
 
   return (
       <div className="container">
-        <div className="login-card">
-          <h1>🎓 Szakdolgozat Portál</h1>
-          <p className="subtitle">Bejelentkezés a rendszerbe</p>
+        <div className="login-box">
+          <h1>Bejelentkezés</h1>
 
           <form onSubmit={handleLogin}>
             <input
                 type="email"
-                placeholder="Email cím"
+                placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
             />
@@ -49,7 +47,7 @@ function App() {
                 onChange={(e) => setPassword(e.target.value)}
             />
 
-            <button type="submit">Bejelentkezés</button>
+            <button type="submit">Belépés</button>
           </form>
         </div>
       </div>
